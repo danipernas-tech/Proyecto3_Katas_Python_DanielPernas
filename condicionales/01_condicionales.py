@@ -1,3 +1,4 @@
+import math
 
 # 5. Escribe una función que tome una lista de números como parámetro y un valor opcional nota_aprobado (por defecto 5). La función debe calcular la media de los números en la lista y determinar si la media es mayor o igual que nota_aprobado. Si es así, el estado será "aprobado"; de lo contrario, "suspenso". La función debe devolver una tupla que contenga la media y el estado.
 
@@ -27,8 +28,7 @@ elif hora >= 8:
 else:
     print("Es de noche")
 
-# 38. Escribe un programa que determine qué calificación en texto tiene un alumno según su calificación numérica.
-# Reglas: 0 - 69: insuficiente 70 - 79: bien 80 - 89: muy bien 90 - 100: excelente
+# 38. Escribe un programa que determine qué calificación en texto tiene un alumno según su calificación numérica. Reglas: 0 - 69: insuficiente 70 - 79: bien 80 - 89: muy bien 90 - 100: excelente
 
 nota = int(input("Introduce la nota: "))
 if nota < 0 or nota > 100:
@@ -42,3 +42,18 @@ elif nota >= 70:
 else:
     print("Insuficiente")
 
+# 39. Escribe una función que tome dos parámetros: figura (una cadena que puede ser "rectangulo", "circulo" o "triangulo") y datos (una tupla con los datos necesarios para calcular el área de la figura).
+
+def area_figura(figura, datos):
+    area = 0
+    if figura == "rectangulo":
+        area = datos[0] * datos[1]
+    elif figura == "triangulo":
+        area = (datos[0] * datos[1]) / 2
+    elif figura == "circulo":
+        area = math.pi * datos[0] ** 2
+    return area
+        
+print(area_figura("rectangulo", (4, 5)))
+print(area_figura("triangulo", (4, 5)))
+print(area_figura("circulo", (3,)))
