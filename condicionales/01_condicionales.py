@@ -13,9 +13,9 @@ def media_notas(notas, nota_aprobado=5):
 print(media_notas(lista_notas))
 
 
-# 7. Genera un programa que nos indique si es de noche, de día o de tarde según la hora proporcionada por el usuario.
+# 37. Genera un programa que nos indique si es de noche, de día o de tarde según la hora proporcionada por el usuario.
 
-hora = int(input("Que hora es?"))
+hora = int(input("Que hora es? (0-23): "))
 if hora < 0 or hora > 23:
     print("Horario incorrecto")
 elif hora >= 20:
@@ -27,4 +27,18 @@ elif hora >= 8:
 else:
     print("Es de noche")
 
+# 38. Escribe un programa que determine qué calificación en texto tiene un alumno según su calificación numérica.
+# Reglas: 0 - 69: insuficiente 70 - 79: bien 80 - 89: muy bien 90 - 100: excelente
+
+nota = int(input("Introduce la nota: "))
+if nota < 0 or nota > 100:
+    print("Nota incorrecta")
+elif nota >= 90:
+    print("Excelente")
+elif nota >= 80:
+    print("Muy bien")
+elif nota >= 70:
+    print("Bien")
+else:
+    print("Insuficiente")
 
